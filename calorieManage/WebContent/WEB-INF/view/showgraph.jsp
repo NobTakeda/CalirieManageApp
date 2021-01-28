@@ -34,11 +34,11 @@
 <div>
 <% for(int i=0;i<fodlist.size();i++){ %>
 	<div class="date">
-		<%= fodlist.get(i).getDate() %>
+		<h3><%= fodlist.get(i).getDate() %>日</h3>
 		<div class="graph">
-			<div class="breakfast"><%= fodlist.get(i).getBreakfastCal() %></div>
-			<div class="lunch"><%= fodlist.get(i).getLunchCal() %></div>
-			<div class="supper"><%= fodlist.get(i).getSupperCal() %></div>
+			<div class="breakfast">朝:<%= fodlist.get(i).getBreakfastCal() %></div>
+			<div class="lunch">昼:<%= fodlist.get(i).getLunchCal() %></div>
+			<div class="supper">晩:<%= fodlist.get(i).getSupperCal() %></div>
 			<div class="total">合計:<%= fodlist.get(i).getTotalCal() %>kcal</div>
 		</div>
 	</div>
