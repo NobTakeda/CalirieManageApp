@@ -35,15 +35,15 @@
 </div>
 <div id="graph" >
 <% for(int i=0;i<fodlist.size();i++){ %>
-	<div class="date">
+	<div class="date" >
 		<h3><%= fodlist.get(i).getDate() %>日</h3>
 		<% for(int j=0;j<4;j++){ %>
 			<% if(j==0){ %>
-				<div class="breakfast" width="<%= fodlist.get(0).getBreakfastCal()/user.getTargetCal()*100 %>">朝:<%= fodlist.get(i).getBreakfastCal() %></div>
+				<div class="breakfast" style="width:<%= (fodlist.get(i).getBreakfastCal()/user.getTargetCal())*100 %>vw">朝:<%= fodlist.get(i).getBreakfastCal() %></div>
 			<% }else if(j==1){ %>
-				<div class="lunch">昼:<%= fodlist.get(i).getLunchCal() %></div>
+				<div class="lunch" style="width<%= fodlist.get(i).getLunchCal()/user.getTargetCal()*100 %>%">昼:<%= fodlist.get(i).getLunchCal() %></div>
 			<% }else if(j==2){ %>
-				<div class="supper">晩:<%= fodlist.get(i).getSupperCal() %></div>
+				<div class="supper" style="width<%= fodlist.get(i).getSupperCal()/user.getTargetCal()*100 %>%">晩:<%= fodlist.get(i).getSupperCal() %></div>
 			<% }else{ %>
 				<div class="total">合計:<%= fodlist.get(i).getTotalCal() %>kcal</div>
 			<% } %>
